@@ -7,40 +7,80 @@ body {
   min-width: 320px;
   background-color: #e5e5e5;
 }
-.nav {
+.nav{
   background-color: #ffffff;
   width: 100%;
   height: 100px;
+  border-bottom: #a5a5a5 solid 3px;
+  position:fixed;
+  
 
   &__h1 {
     width: 40%;
     color: #08a6e4;
     font-family: "Raleway";
     font-style: normal;
-    font-size: 16px;
+    font-size: 14px;
     float: left;
     position: relative;
     margin: 30px;
-    margin-left: 20px;
+    margin-left: 10%;
   }
-  &__img {
-    width: 40%;
+  &__button{
+    width: 20%;
+    border:none;
+    background-color: #ffffff;
     float: right;
     position: relative;
     margin-top: 30px;
-    img {
-      width: 20px;
-      margin-left: 70%;
+    margin-right: 10%;
+    
+    img{
+        width: 30%;   
     }
-  }
-  &__menu {
+   
+  }  
+  #btn.remove{
     display: none;
   }
-}
 
-hr {
+
+&__menu{
+  display: none;
+}
+  
+  #links.show {
+    display:block;
+    margin-left: 60%;
+    padding:10px;
+   
+    a {
+      display: block;  
+      text-decoration: none;
+      font-family: "Open Sans";
+      font-weight: 700;
+      font-size: 15px;
+      color: #a5a5a5;
+    }
+    a:hover {
+      color: black;
+      border-bottom: 2px solid #08a6e4;
+    }   
+
+  }
+}
+.container-bar{
+  position: fixed;
   width: 100%;
-  background-color: lightgrey;
+  height: 10px;
+  background-color: #08a6e4;
+ 
+
+  .progress-bar{
+    height: 8px;
+    background-color: #fb3b64;
+    width: 0%;
+  }
 }
 
 .container {
@@ -91,7 +131,7 @@ hr {
     padding: 20px;
 
     &--img {
-      position: relative;
+     
       background-color: #fb3b64;
       margin-left: 40%;
       margin-right: 20%;
@@ -127,7 +167,7 @@ hr {
     padding: 20px;
     margin-bottom: 10%;
     &--img {
-      position: relative;
+     
       background-color: #08a6e4;
       margin-left: 40%;
       margin-right: 20%;
@@ -161,7 +201,7 @@ hr {
     padding: 20px;
     margin-bottom: 10%;
     &--img {
-      position: relative;
+     
       background-color: #55dfb4;
       margin-left: 40%;
       margin-right: 20%;
@@ -194,6 +234,7 @@ hr {
 }
 
 .firstContainer {
+ 
   background-color: white;
   width: 80%;
   padding: 20px;
@@ -537,16 +578,17 @@ footer {
     display: flex;
     flex-direction: row;
 
-    &__img {
+    &__button {
       display: none;
     }
     &__menu {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
-      margin-left: 15%;
+     
 
       a {
+        display: inline;
         text-decoration: none;
         margin-left: 40px;
         font-family: "Open Sans";

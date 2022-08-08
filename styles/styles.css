@@ -14,6 +14,8 @@ body {
   background-color: #ffffff;
   width: 100%;
   height: 100px;
+  border-bottom: #a5a5a5 solid 3px;
+  position: fixed;
 }
 
 .nav__h1 {
@@ -21,32 +23,66 @@ body {
   color: #08a6e4;
   font-family: "Raleway";
   font-style: normal;
-  font-size: 16px;
+  font-size: 14px;
   float: left;
   position: relative;
   margin: 30px;
-  margin-left: 20px;
+  margin-left: 10%;
 }
 
-.nav__img {
-  width: 40%;
+.nav__button {
+  width: 20%;
+  border: none;
+  background-color: #ffffff;
   float: right;
   position: relative;
   margin-top: 30px;
+  margin-right: 10%;
 }
 
-.nav__img img {
-  width: 20px;
-  margin-left: 70%;
+.nav__button img {
+  width: 30%;
+}
+
+.nav #btn.remove {
+  display: none;
 }
 
 .nav__menu {
   display: none;
 }
 
-hr {
+.nav #links.show {
+  display: block;
+  margin-left: 60%;
+  padding: 10px;
+}
+
+.nav #links.show a {
+  display: block;
+  text-decoration: none;
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 15px;
+  color: #a5a5a5;
+}
+
+.nav #links.show a:hover {
+  color: black;
+  border-bottom: 2px solid #08a6e4;
+}
+
+.container-bar {
+  position: fixed;
   width: 100%;
-  background-color: lightgrey;
+  height: 10px;
+  background-color: #08a6e4;
+}
+
+.container-bar .progress-bar {
+  height: 8px;
+  background-color: #fb3b64;
+  width: 0%;
 }
 
 .container {
@@ -104,7 +140,6 @@ hr {
 }
 
 .icons__person--img {
-  position: relative;
   background-color: #fb3b64;
   margin-left: 40%;
   margin-right: 20%;
@@ -144,7 +179,6 @@ hr {
 }
 
 .icons__eye--img {
-  position: relative;
   background-color: #08a6e4;
   margin-left: 40%;
   margin-right: 20%;
@@ -183,7 +217,6 @@ hr {
 }
 
 .icons__catalogo--img {
-  position: relative;
   background-color: #55dfb4;
   margin-left: 40%;
   margin-right: 20%;
@@ -592,7 +625,7 @@ footer .logos {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .nav__img {
+  .nav__button {
     display: none;
   }
   .nav__menu {
@@ -606,9 +639,9 @@ footer .logos {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    margin-left: 15%;
   }
   .nav__menu a {
+    display: inline;
     text-decoration: none;
     margin-left: 40px;
     font-family: "Open Sans";

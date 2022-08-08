@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="./main.js" type="text/javascript" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@200&display=swap"
       rel="stylesheet"
@@ -20,18 +21,20 @@
       <div class="nav__h1">
         <h1>OXYGENShop</h1>
       </div>
-      <div class="nav__img">
-        <img src="./assets/img/icons/menu.svg" />
-      </div>
-      <div class="nav__menu">
+      
+        <button id = "btn" class="nav__button"><img src= "./assets/img/icons/menu.svg" /></button>
+     
+      <div id ="links" class="nav__menu">
         <a href="">WHY US</a>
         <a href="">BENEFITS</a>
         <a href="">PRICE</a>
         <a href="">CONTACT</a>
       </div>
     </nav>
+    <div class="container-bar">
+      <div class="progress-bar" id="bar"></div>
+    </div>
 
-    <hr />
 
     <div class="container">
       <p class="container__title">Sell More!</p>
@@ -233,5 +236,6 @@
         <img src="./assets/img/icons/facebook.svg" />
       </div>
     </footer>
+ 
   </body>
 </html>
