@@ -99,7 +99,7 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
   })
       
 })
-// Crear popup (/modal)
+
 
 
 
