@@ -100,6 +100,8 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
       
 })
 
+// crear un popup 
+
 
 
 

@@ -584,8 +584,36 @@ body {
     margin-left: 80%;
     
   }
+  /* ventana modal */
 }
+.modal{
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
+  &__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 200px;
+    border-radius: 8px;
+    border:#08a6e4 solid 4px;
+    padding: 20px ;
+    background-color:lightblue;
+    margin:auto;
+   
+    &__title{
+      font-family: "Raleway";
+      font-size: 15px;
+      color: #fb3b64;
+    }
+  }
+
+}
 
 footer {
   display: flex;

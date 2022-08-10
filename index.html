@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <script src="./main.js" type="text/javascript" defer></script>
+    <script src="https://kit.fontawesome.com/e218080865.js" crossorigin="anonymous"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@200&display=swap"
       rel="stylesheet"
@@ -40,8 +41,7 @@
       <div class="progress-bar" id="bar"></div>
     </div>
 
-  
-   
+
 
     <div class="container">
       <p class="container__title">Sell More!</p>
@@ -206,7 +206,7 @@
         </div>
       </div>
 
-      <form id="form" method="post">
+      <form id="form">
         <ul>
           <li class="input">
             <label class= "tag" for="name">NAME</label>
@@ -237,6 +237,26 @@
       <button id = "returnBtn" class= "return__button" >Return Top </button>
     </div>
 
+
+    <section class="modal">
+      <div class="modal__container">
+        <div class="modal__close">
+          <i class="fa-regular fa-circle-xmark"></i>
+        </div>
+        <h2 class="modal__title">Suscribe to our newsletter</h2>
+        <form class="modal__form">
+        <label class= "modal__label" for="mail">EMAIL</label>
+            <input class= "modal__input" type="email" id="mail" name= "mail" placeholder="Writte your email"/>
+        <div class="modal__btn">
+        <button id= "modal__send" type="submit">Send Suscribe</button>
+        </div>
+      </form>
+     
+
+    </div>
+    </section>
+
+
     <footer>
       <div class="footerText">
         <h1>OXYGENShop</h1>
@@ -249,5 +269,7 @@
       </div>
     </footer>
  
+
+
   </body>
 </html>
