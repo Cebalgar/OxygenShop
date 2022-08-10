@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="./main.js" type="text/javascript" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@200&display=swap"
       rel="stylesheet"
@@ -16,22 +17,31 @@
     <title>OxygenShop</title>
   </head>
   <body>
+
+
     <nav class="nav">
+    
       <div class="nav__h1">
         <h1>OXYGENShop</h1>
       </div>
-      <div class="nav__img">
-        <img src="./assets/img/icons/menu.svg" />
-      </div>
-      <div class="nav__menu">
-        <a href="">WHY US</a>
-        <a href="">BENEFITS</a>
-        <a href="">PRICE</a>
-        <a href="">CONTACT</a>
-      </div>
-    </nav>
+      
+        <button id= "btn" class="nav__button"><img src= "./assets/img/icons/menu.svg" /></button>
+     
 
-    <hr />
+        <div id ="links" class="nav__menu">
+          <a href="">WHY US</a>
+          <a href="">BENEFITS</a>
+          <a href="">PRICE</a>
+          <a href="">CONTACT</a>
+        </div>
+    
+    </nav>
+    <div class="container-bar">
+      <div class="progress-bar" id="bar"></div>
+    </div>
+
+  
+   
 
     <div class="container">
       <p class="container__title">Sell More!</p>
@@ -196,30 +206,35 @@
         </div>
       </div>
 
-      <form>
+      <form id="form" method="post">
         <ul>
           <li class="input">
-            <label for="name">NAME</label>
-            <input type="text" id="name" name="user_name" />
+            <label class= "tag" for="name">NAME</label>
+            <input class= "regist" type="text" id="name" name= "name" />
           </li>
           <li class="input">
-            <label for="mail">EMAIL</label>
-            <input type="text" id="mail" name="user_mail" />
+            <label class= "tag" for="mail">EMAIL</label>
+            <input class= "regist" type="text" id="mail" name= "mail" />
           </li>
-          <li class="dataProtection">
-            <p>
-              <img src="./assets/img/icons/Checkbox.svg" /> Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat. Duis dolor.
-            </p>
+          <li class= "dataProtection">
+            
+              <input type="checkbox" id="cbox1" name="cbox1" value="data"> 
+              <label class="ipsum" for="cbox1" >Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis dolor.</label>
+    
           </li>
           <li class="buttonSend">
-            <button type="submit">Send</button>
+            <button id= "send" type="submit">Send</button>
           </li>
         </ul>
       </form>
+     
+    </div>
+    <div class = "return">
+      <button id = "returnBtn" class= "return__button" >Return Top </button>
     </div>
 
     <footer>
@@ -233,5 +248,6 @@
         <img src="./assets/img/icons/facebook.svg" />
       </div>
     </footer>
+ 
   </body>
 </html>

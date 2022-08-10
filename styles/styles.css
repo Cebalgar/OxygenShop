@@ -14,6 +14,11 @@ body {
   background-color: #ffffff;
   width: 100%;
   height: 100px;
+  border-bottom: #a5a5a5 solid 3px;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
 }
 
 .nav__h1 {
@@ -21,32 +26,78 @@ body {
   color: #08a6e4;
   font-family: "Raleway";
   font-style: normal;
-  font-size: 16px;
+  font-size: 14px;
   float: left;
   position: relative;
   margin: 30px;
-  margin-left: 20px;
+  margin-left: 10%;
 }
 
-.nav__img {
-  width: 40%;
+.nav__button {
+  width: 20%;
+  border: none;
+  background-color: #ffffff;
   float: right;
   position: relative;
   margin-top: 30px;
+  margin-right: 10%;
 }
 
-.nav__img img {
-  width: 20px;
-  margin-left: 70%;
+.nav__button img {
+  width: 30%;
+}
+
+.nav #btn.remove {
+  display: none;
 }
 
 .nav__menu {
   display: none;
 }
 
-hr {
+.nav #links.show {
+  display: block;
   width: 100%;
-  background-color: lightgrey;
+  margin-left: 0;
+  position: absolute;
+  height: 200px;
+  margin-top: 100px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
+}
+
+.nav #links.show a {
+  display: block;
+  text-decoration: none;
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 15px;
+  color: #a5a5a5;
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+  margin-top: 18px;
+  margin-left: 5%;
+}
+
+.nav #links.show a:hover {
+  width: 10%;
+  color: black;
+}
+
+.container-bar {
+  position: fixed;
+  width: 100%;
+  height: 10px;
+  background-color: #08a6e4;
+  z-index: 100;
+}
+
+.container-bar .progress-bar {
+  height: 8px;
+  background-color: #fb3b64;
+  width: 0%;
 }
 
 .container {
@@ -72,11 +123,14 @@ hr {
   border-radius: 60px;
   border: none;
   background-color: #08a6e4;
-  -webkit-box-shadow: 5px 5px 5px #08a6e4;
-          box-shadow: 5px 5px 5px #08a6e4;
   color: whitesmoke;
   font-weight: 600;
   margin-bottom: 20px;
+}
+
+.container__button:hover {
+  -webkit-box-shadow: 10px 18px 8px 13px #08a6e4;
+          box-shadow: 10px 18px 8px 13px #08a6e4;
 }
 
 .container__img {
@@ -104,7 +158,6 @@ hr {
 }
 
 .icons__person--img {
-  position: relative;
   background-color: #fb3b64;
   margin-left: 40%;
   margin-right: 20%;
@@ -144,7 +197,6 @@ hr {
 }
 
 .icons__eye--img {
-  position: relative;
   background-color: #08a6e4;
   margin-left: 40%;
   margin-right: 20%;
@@ -183,7 +235,6 @@ hr {
 }
 
 .icons__catalogo--img {
-  position: relative;
   background-color: #55dfb4;
   margin-left: 40%;
   margin-right: 20%;
@@ -502,16 +553,16 @@ hr {
   list-style: none;
 }
 
-.information form ul label {
+.information form ul .tag {
   display: block;
   padding-bottom: 20px;
-  border: none;
+  border-color: #ffffff;
   font-family: "Raleway";
   font-size: 12px;
   color: #08a6e4;
 }
 
-.information form ul input {
+.information form ul .regist {
   width: 100%;
   border: none;
   border-bottom: 1px solid grey;
@@ -519,19 +570,31 @@ hr {
 }
 
 .information form ul .dataProtection {
+  display: inline;
+  width: 100%;
+  height: 200px;
   margin-right: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.information form ul .dataProtection #cbox1 {
+  width: 10%;
+}
+
+.information form ul .dataProtection .ipsum {
+  width: 40%;
   font-family: "Raleway";
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .information form ul .buttonSend {
+  padding-top: 30px;
   margin-left: 30%;
   margin-bottom: 30px;
   padding-bottom: 60px;
 }
 
-.information form ul .buttonSend button {
+.information form ul .buttonSend #send {
   background-color: #08a6e4;
   width: 150px;
   height: 30px;
@@ -541,6 +604,22 @@ hr {
   border-radius: 18px;
   border: 1px solid #08a6e4;
   color: white;
+}
+
+.return {
+  background-color: #ffffff;
+  padding-bottom: 20px;
+}
+
+.return__button {
+  width: 15%;
+  height: 40px;
+  background-color: #08a6e4;
+  margin-left: -25px;
+  border-radius: 18px;
+  border: 1px solid #08a6e4;
+  color: white;
+  margin-left: 80%;
 }
 
 footer {
@@ -592,7 +671,7 @@ footer .logos {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .nav__img {
+  .nav__button {
     display: none;
   }
   .nav__menu {
@@ -606,9 +685,9 @@ footer .logos {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    margin-left: 15%;
   }
   .nav__menu a {
+    display: inline;
     text-decoration: none;
     margin-left: 40px;
     font-family: "Open Sans";
