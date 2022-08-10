@@ -15,7 +15,10 @@ body {
   width: 100%;
   height: 100px;
   border-bottom: #a5a5a5 solid 3px;
-  position: fixed;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
 }
 
 .nav__h1 {
@@ -54,8 +57,14 @@ body {
 
 .nav #links.show {
   display: block;
-  margin-left: 60%;
-  padding: 10px;
+  width: 100%;
+  margin-left: 0;
+  position: absolute;
+  height: 200px;
+  margin-top: 100px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
 }
 
 .nav #links.show a {
@@ -65,11 +74,16 @@ body {
   font-weight: 700;
   font-size: 15px;
   color: #a5a5a5;
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+  margin-top: 18px;
+  margin-left: 5%;
 }
 
 .nav #links.show a:hover {
+  width: 10%;
   color: black;
-  border-bottom: 2px solid #08a6e4;
 }
 
 .container-bar {
@@ -77,6 +91,7 @@ body {
   width: 100%;
   height: 10px;
   background-color: #08a6e4;
+  z-index: 100;
 }
 
 .container-bar .progress-bar {
@@ -108,11 +123,14 @@ body {
   border-radius: 60px;
   border: none;
   background-color: #08a6e4;
-  -webkit-box-shadow: 5px 5px 5px #08a6e4;
-          box-shadow: 5px 5px 5px #08a6e4;
   color: whitesmoke;
   font-weight: 600;
   margin-bottom: 20px;
+}
+
+.container__button:hover {
+  -webkit-box-shadow: 10px 18px 8px 13px #08a6e4;
+          box-shadow: 10px 18px 8px 13px #08a6e4;
 }
 
 .container__img {
@@ -535,16 +553,16 @@ body {
   list-style: none;
 }
 
-.information form ul label {
+.information form ul .tag {
   display: block;
   padding-bottom: 20px;
-  border: none;
+  border-color: #ffffff;
   font-family: "Raleway";
   font-size: 12px;
   color: #08a6e4;
 }
 
-.information form ul input {
+.information form ul .regist {
   width: 100%;
   border: none;
   border-bottom: 1px solid grey;
@@ -552,19 +570,31 @@ body {
 }
 
 .information form ul .dataProtection {
+  display: inline;
+  width: 100%;
+  height: 200px;
   margin-right: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.information form ul .dataProtection #cbox1 {
+  width: 10%;
+}
+
+.information form ul .dataProtection .ipsum {
+  width: 40%;
   font-family: "Raleway";
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .information form ul .buttonSend {
+  padding-top: 30px;
   margin-left: 30%;
   margin-bottom: 30px;
   padding-bottom: 60px;
 }
 
-.information form ul .buttonSend button {
+.information form ul .buttonSend #send {
   background-color: #08a6e4;
   width: 150px;
   height: 30px;
