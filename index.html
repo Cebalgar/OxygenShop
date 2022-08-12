@@ -18,17 +18,24 @@
     <title>OxygenShop</title>
   </head>
   <body>
-
-
-    <nav class="nav">
     
-      <div class="nav__h1">
+    <div class="bar">
+      <div class="bar-container">
+        <div class="bar-progress" id="bar"></div>
+      </div>  
+    </div>
+  
+        
+      <nav class="nav">
+        <div class="nav__h1">
         <h1>OXYGENShop</h1>
-      </div>
-      
-        <button id= "btn" class="nav__button"><img src= "./assets/img/icons/menu.svg" /></button>
-     
+        </div>
+      <button id="btnClosedMenu" class="closedMenu" >
+        <i class="fa-solid fa-xmark" id="closedX"></i>
+      </button>
 
+        <button id= "btn" class="nav__button"><img src= "./assets/img/icons/menu.svg" /></button>
+      
         <div id ="links" class="nav__menu">
           <a href="">WHY US</a>
           <a href="">BENEFITS</a>
@@ -37,12 +44,7 @@
         </div>
     
     </nav>
-    <div class="container-bar">
-      <div class="progress-bar" id="bar"></div>
-    </div>
-
-
-
+    
     <div class="container">
       <p class="container__title">Sell More!</p>
       <p class="container__body">
@@ -113,7 +115,6 @@
         </p>
       </div>
     </div>
-
     <div class="thirdContainer">
       <div class="thirdContainer__content">
         <p class="title">Increase recognition your brand</p>
@@ -127,14 +128,26 @@
         <img class="img" src="assets/img/bg-trumpet.png" />
       </div>
     </div>
+
+
     <div class="price">
       <h3>Pricing</h3>
     </div>
+
+
     <div class="finishContainer">
+        <form id="currencies" class="selecCurrency">
+          <label for="currencies" class="labelCurrency">Currency</label>
+          <select name="currencies" id="options">
+            <option value="usd">USD</option>
+            <option value="gbp">GBP</option>
+            <option value="eur">EUR</option>
+          </select>
+        </form>
       <div class="containerNormal">
         <div class="leftCon">
           <p class="title">Basic</p>
-          <p class="amount">$ 0</p>
+          <p  id = "amountBasic" class="amount">$ 0</p>
         </div>
         <div class="content">
           <p><img src="./assets/img/icons/Checkbox.svg" /> 100 MB HDD</p>
@@ -147,14 +160,13 @@
 
           <p><img src="./assets/img/icons/Cross.svg" /> Full support</p>
         </div>
-
         <button class="buttonNormal">Begin</button>
       </div>
 
       <div class="containerNormal containerBlue">
         <div class="leftCon">
           <p class="title">Profesional</p>
-          <p class="amount">$ 25</p>
+          <p id = "amountProfesional" class="amount">$ 25</p>
         </div>
         <div class="content">
           <p><img src="./assets/img/icons/Checkbox.svg" /> 500 MB HDD</p>
@@ -167,14 +179,13 @@
 
           <p><img src="./assets/img/icons/Cross.svg" /> Full support</p>
         </div>
-
         <button class="buttonNormal buttonBlue">Begin</button>
       </div>
 
       <div class="containerNormal containerGreen">
         <div class="leftCon">
           <p class="title">Premiun</p>
-          <p class="amount">$ 60</p>
+          <p id = "amountPremiun" class="amount">$ 60</p>
           <p class="limit">Limit offer</p>
         </div>
         <div class="content">
@@ -188,7 +199,6 @@
 
           <p><img src="./assets/img/icons/Checkbox.svg" /> Full support</p>
         </div>
-
         <button class="buttonNormal buttonGreen">Begin</button>
       </div>
     </div>
@@ -238,18 +248,21 @@
     </div>
 
 
-    <section class="modal">
-      <div class="modal__container">
-        <div class="modal__close">
-          <i class="fa-regular fa-circle-xmark"></i>
-        </div>
-        <h2 class="modal__title">Suscribe to our newsletter</h2>
-        <form class="modal__form">
-        <label class= "modal__label" for="mail">EMAIL</label>
-            <input class= "modal__input" type="email" id="mail" name= "mail" placeholder="Writte your email"/>
-        <div class="modal__btn">
-        <button id= "modal__send" type="submit">Send Suscribe</button>
-        </div>
+    <section  id= "popup" class="modal">
+
+      <div class="modal__popup">
+
+          <i class="fa-regular fa-circle-xmark" id="closed"></i>
+
+          <div class= "modal__popup--content">
+           <h2 class="subscribe">Subscribe to our newsletter</h2>
+           <p class="infoSubscribe">The most popular sales platform in country</p>
+          </div>
+
+        <form id="FormModal" class="modal__popup--form">
+            <input class= "input" type="email" id="mailPopup" name= "mail" placeholder="Writte your email"/>
+        <button id= "sendSubscribe" type="submit">Send Subscription</button>
+     
       </form>
      
 
