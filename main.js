@@ -5,7 +5,8 @@ const showMenu = document.getElementById("links");
 const menuX= document.getElementById("btnClosedMenu")
 
 
-const handleClick = function(event) {
+const handleClick = function() {
+
  showMenu.classList.toggle("show");
  btnMenu.classList.toggle("remove");
  menuX.classList.toggle("show"); 
@@ -13,8 +14,8 @@ const handleClick = function(event) {
 btnMenu.addEventListener("click", handleClick);
 
 
-menuX.addEventListener("click", (e)=>{
-  e.preventDefault();
+menuX.addEventListener("click", ()=>{
+
   showMenu.style.display = "none";
   menuX.style.display = "none";
   btnMenu.style.display = "block";
@@ -61,11 +62,21 @@ form.addEventListener("submit", e =>{
     
     
     if(nameInput.value.length < 2 || nameInput.value.length >100){
+
+      nameInput.style.borderBottom= "red solid 2px";
       alert("nombre NO VALIDO");
+    
+    }else{
+      nameInput.style.borderBottom= "green solid 2px";
     }
     if(!regexEmail.test(mail.value)){
+        mailInput.style.borderBottom= "red solid 2px";
         alert ("el email no es valido")
+      
+    }else{
+      mailInput.style.borderBottom= "green solid 2px";
     }
+    
   
     if(!checkboxInput.checked){
         alert ("checkbox NO esta selecionado")
@@ -109,10 +120,17 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 const modal= document.getElementById("popup");
 const modalClosed = document.getElementById("closed");
 
-setTimeout(function showModal() {
-  modal.style.display= "flex";
+const showModal = ()=>{
+  localStorage.setItem("show",true);
+}
+if(typeof(Storage) !== "undefined"){
+  if(!localStorage.getItem("show")){
+    setTimeout(()=>{
+      modal.style.display= "flex";
 }, 5000);
-
+    
+  }
+}
 
 modalClosed.addEventListener("click",(e)=>{
   modal.style.display = "none";
@@ -128,13 +146,9 @@ window.addEventListener("keyup", (e)=>{
     modal.style.display= "none";
   }
 });
-// let closed = localStorage.getItem(modalClosed) !== null;
-// function closeModal() {
-//   modalClosed = true;
-//   localStorage.setItem(modalClosed, '1');
-// }
 
-//envio mail
+
+//send mail
 
 const formPopup = document.getElementById("FormModal");
 
@@ -170,8 +184,6 @@ susbClosed.addEventListener("click",(e)=>{
   modal.style.display = "none";
 });
 
-
-
 // Currency Selector
 const url = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json";
 
@@ -179,7 +191,6 @@ const select = document.getElementById("options");
 const basic = document.getElementById("amountBasic");
 const profesional = document.getElementById("amountProfesional");
 const premiun = document.getElementById("amountPremiun");
-
 
 fetch(url)
 .then((response) => response.json())
@@ -212,5 +223,69 @@ fetch(url)
   })
   .catch((error)=>{
     console.log ("Error en la petición: " + error);
+  });
+
+  //SLIDER
+ 
+
+  const sliders= document.getElementById("slider");
+  const imgPhotos= document.getElementsByClassName("img-photo");
+  const btnRight= document.getElementById("next");
+  const btnLeft= document.getElementById("before");
+  const dots = document.getElementsByClassName("dot");
+
+
+// DOTS SLIDER
+for( let i = 0; i < dots.length; i++){
+  dots[i].addEventListener("click", (e)=>{
+    for ( let i = 0; i < imgPhotos.length; i++){
+      if(e.target.value == i){
+        imgPhotos[i].style.display = "block";
+      }else{
+        imgPhotos[i].style.display = "none";
+      }
+    }
   })
+}
+
+//ARROWS SLIDER
+
+let indice = 1;
+showSlider(indice);
+
+function nextSlide(n){
+  showSlider( indice+=n);
+}
+setInterval(function sliderAuto(){
+  showSlider(indice+=1)
+},3000);
+
+function showSlider(n){
+  let i;
+  if(n > imgPhotos.length){
+    indice = 1;
+    console.log(indice);
+  }
+   if(n < 1){
+    indice = imgPhotos.length;
+   }
+   for( let i = 0; i < imgPhotos.length; i++){
+    imgPhotos[i].style.display = "none";
+   }
+   imgPhotos[indice-1].style.display = "block";
+}
+
+btnRight.addEventListener("click", ()=>{
+  nextSlide(1);
+});
+btnLeft.addEventListener("click", ()=>{
+  nextSlide(-1);
+});
+
+
+ 
+
+
+
+  
 

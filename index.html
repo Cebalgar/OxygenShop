@@ -8,8 +8,9 @@
     <script src="./main.js" type="text/javascript" defer></script>
     <script src="https://kit.fontawesome.com/e218080865.js" crossorigin="anonymous"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@200&display=swap"
-      rel="stylesheet"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@200;400;700;900&display=swap" rel="stylesheet">
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
@@ -203,6 +204,32 @@
       </div>
     </div>
 
+    <div id="slider">
+      <div class="photos" id="photos">
+      <div class="img-photo" id="one"><img src= "./assets/img/slider/1.jpg"></div>
+      <div class="img-photo" id="two"><img src= "./assets/img/slider/6.jpg"></div>
+      <div class="img-photo" id="three"><img src= "./assets/img/slider/4.jpg "></div>
+      <div class="img-photo" id="four"><img src= "./assets/img/slider/2.jpg "></div>
+      </div>
+     
+        <div  class="arrows">
+          <button class = "btnArrow" id="before">
+            <img src ="assets/arrowLeft.svg" class="arrowLeft" >
+          </button>
+          <button class="btnArrow" id="next">
+            <img src ="assets/arrowRight.svg" class="arrowRight" >
+          </button>
+        </div>
+        <div class = "dots">
+          <button class="dot" value="0"></button>
+          <button class="dot" value="1"></button>
+          <button class="dot" value="2"></button>
+          <button class="dot" value="3"></button>
+          
+        </div>
+    </div>
+    
+
     <div class="information">
       <div class="infoPersonal">
         <div class="contact">
@@ -249,11 +276,8 @@
 
 
     <section  id= "popup" class="modal">
-
       <div class="modal__popup">
-
           <i class="fa-regular fa-circle-xmark" id="closed"></i>
-
           <div class= "modal__popup--content">
            <h2 class="subscribe">Subscribe to our newsletter</h2>
            <p class="infoSubscribe">The most popular sales platform in country</p>
@@ -264,8 +288,6 @@
         <button id= "sendSubscribe" type="submit">Send Subscription</button>
      
       </form>
-     
-
     </div>
     </section>
 
