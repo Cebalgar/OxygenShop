@@ -10,12 +10,33 @@ body {
   background-color: #e5e5e5;
 }
 
+.bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.bar .bar-container {
+  width: 100%;
+  height: 17px;
+  background-color: #08a6e4;
+}
+
+.bar .bar-container .bar-progress {
+  height: 15px;
+  background-color: #fb3b64;
+  width: 0%;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+
 .nav {
   background-color: #ffffff;
   width: 100%;
-  height: 100px;
+  height: 150px;
+  padding: 20px;
   border-bottom: #a5a5a5 solid 3px;
-  top: 0;
   position: -webkit-sticky;
   position: sticky;
   z-index: 100;
@@ -33,7 +54,29 @@ body {
   margin-left: 10%;
 }
 
+.nav #btnClosedMenu.show {
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #ffffff;
+  float: right;
+  position: relative;
+  margin-top: 30px;
+}
+
+.nav #btnClosedMenu.show #closedX {
+  position: absolute;
+  right: 35px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.nav .closedMenu {
+  display: none;
+}
+
 .nav__button {
+  display: block;
   width: 20%;
   border: none;
   background-color: #ffffff;
@@ -41,6 +84,7 @@ body {
   position: relative;
   margin-top: 30px;
   margin-right: 10%;
+  cursor: pointer;
 }
 
 .nav__button img {
@@ -86,20 +130,6 @@ body {
   color: black;
 }
 
-.container-bar {
-  position: fixed;
-  width: 100%;
-  height: 10px;
-  background-color: #08a6e4;
-  z-index: 100;
-}
-
-.container-bar .progress-bar {
-  height: 8px;
-  background-color: #fb3b64;
-  width: 0%;
-}
-
 .container {
   text-align: center;
   background-color: white;
@@ -126,11 +156,14 @@ body {
   color: whitesmoke;
   font-weight: 600;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .container__button:hover {
-  -webkit-box-shadow: 10px 18px 8px 13px #08a6e4;
-          box-shadow: 10px 18px 8px 13px #08a6e4;
+  -webkit-box-shadow: 5px 7px 8px 13px #08a6e4;
+          box-shadow: 5px 7px 8px 13px #08a6e4;
+  background-color: #ffffff;
+  color: #078CEB;
 }
 
 .container__img {
@@ -417,6 +450,15 @@ body {
           flex-direction: column;
 }
 
+.finishContainer .selecCurrency {
+  margin: 20px;
+}
+
+.finishContainer .selecCurrency .labelCurrency {
+  font-family: "Raleway";
+  font-weight: 600;
+}
+
 .finishContainer .containerNormal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -481,6 +523,7 @@ body {
   border-radius: 18px;
   border: 1px solid #fb3b64;
   color: white;
+  cursor: pointer;
 }
 
 .finishContainer .containerBlue {
@@ -517,6 +560,92 @@ body {
 .finishContainer .containerGreen .buttonGreen {
   background-color: #55dfb4;
   border: 1px solid #55dfb4;
+}
+
+#slider {
+  width: 100%;
+  height: 300px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+#slider .photos {
+  width: 100%;
+}
+
+#slider .photos .img-photo {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 2s;
+  transition: 2s;
+  position: absolute;
+}
+
+#slider .photos .img-photo .img-photo img {
+  width: 100%;
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: top;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+#slider .arrows {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#slider .arrows .btnArrow {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 40%;
+  border: black solid 1px;
+  cursor: pointer;
+}
+
+#slider .arrows .btnArrow:hover {
+  background-color: whitesmoke;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#slider .dots {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 15px;
+}
+
+#slider .dots .dot {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  margin: 0 3px;
+  background-color: lightgrey;
+  display: inline-block;
+  border-radius: 50%;
 }
 
 .information {
@@ -604,6 +733,7 @@ body {
   border-radius: 18px;
   border: 1px solid #08a6e4;
   color: white;
+  cursor: pointer;
 }
 
 .return {
@@ -620,6 +750,116 @@ body {
   border: 1px solid #08a6e4;
   color: white;
   margin-left: 80%;
+  cursor: pointer;
+}
+
+.modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #a5a5a5cb;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal__popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+  height: 400px;
+  border-radius: 8px;
+  border: #08a6e4 solid 4px;
+  padding: 20px;
+  background-color: whitesmoke;
+  margin: auto;
+  position: relative;
+}
+
+.modal__popup #closed {
+  position: absolute;
+  right: 25px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modal__popup--content {
+  margin-top: 50px;
+}
+
+.modal__popup--content .subscribe {
+  font-family: "Raleway";
+  font-size: 25px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.modal__popup--content .infoSubscribe {
+  font-family: "Raleway";
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.modal__popup--form {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.modal__popup--form .input {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 90%;
+  height: 40px;
+  border: black solid 2px;
+}
+
+.modal__popup--form #sendSubscribe {
+  width: 70%;
+  height: 50px;
+  background-color: #08a6e4;
+  border-radius: 18px;
+  border: 1px solid #08a6e4;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.modal__popup--form #sendSubscribe:hover {
+  background-color: #078CEB;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
 }
 
 footer {

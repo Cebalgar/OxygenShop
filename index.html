@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <script src="./main.js" type="text/javascript" defer></script>
+    <script src="https://kit.fontawesome.com/e218080865.js" crossorigin="anonymous"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@200&display=swap"
-      rel="stylesheet"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@200;400;700;900&display=swap" rel="stylesheet">
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
@@ -17,17 +19,24 @@
     <title>OxygenShop</title>
   </head>
   <body>
-
-
-    <nav class="nav">
     
-      <div class="nav__h1">
+    <div class="bar">
+      <div class="bar-container">
+        <div class="bar-progress" id="bar"></div>
+      </div>  
+    </div>
+  
+        
+      <nav class="nav">
+        <div class="nav__h1">
         <h1>OXYGENShop</h1>
-      </div>
-      
-        <button id= "btn" class="nav__button"><img src= "./assets/img/icons/menu.svg" /></button>
-     
+        </div>
+      <button id="btnClosedMenu" class="closedMenu" >
+        <i class="fa-solid fa-xmark" id="closedX"></i>
+      </button>
 
+        <button id= "btn" class="nav__button"><img src= "./assets/img/icons/menu.svg" /></button>
+      
         <div id ="links" class="nav__menu">
           <a href="">WHY US</a>
           <a href="">BENEFITS</a>
@@ -36,13 +45,7 @@
         </div>
     
     </nav>
-    <div class="container-bar">
-      <div class="progress-bar" id="bar"></div>
-    </div>
-
-  
-   
-
+    
     <div class="container">
       <p class="container__title">Sell More!</p>
       <p class="container__body">
@@ -113,7 +116,6 @@
         </p>
       </div>
     </div>
-
     <div class="thirdContainer">
       <div class="thirdContainer__content">
         <p class="title">Increase recognition your brand</p>
@@ -127,14 +129,26 @@
         <img class="img" src="assets/img/bg-trumpet.png" />
       </div>
     </div>
+
+
     <div class="price">
       <h3>Pricing</h3>
     </div>
+
+
     <div class="finishContainer">
+        <form id="currencies" class="selecCurrency">
+          <label for="currencies" class="labelCurrency">Currency</label>
+          <select name="currencies" id="options">
+            <option value="usd">USD</option>
+            <option value="gbp">GBP</option>
+            <option value="eur">EUR</option>
+          </select>
+        </form>
       <div class="containerNormal">
         <div class="leftCon">
           <p class="title">Basic</p>
-          <p class="amount">$ 0</p>
+          <p  id = "amountBasic" class="amount">$ 0</p>
         </div>
         <div class="content">
           <p><img src="./assets/img/icons/Checkbox.svg" /> 100 MB HDD</p>
@@ -147,14 +161,13 @@
 
           <p><img src="./assets/img/icons/Cross.svg" /> Full support</p>
         </div>
-
         <button class="buttonNormal">Begin</button>
       </div>
 
       <div class="containerNormal containerBlue">
         <div class="leftCon">
           <p class="title">Profesional</p>
-          <p class="amount">$ 25</p>
+          <p id = "amountProfesional" class="amount">$ 25</p>
         </div>
         <div class="content">
           <p><img src="./assets/img/icons/Checkbox.svg" /> 500 MB HDD</p>
@@ -167,14 +180,13 @@
 
           <p><img src="./assets/img/icons/Cross.svg" /> Full support</p>
         </div>
-
         <button class="buttonNormal buttonBlue">Begin</button>
       </div>
 
       <div class="containerNormal containerGreen">
         <div class="leftCon">
           <p class="title">Premiun</p>
-          <p class="amount">$ 60</p>
+          <p id = "amountPremiun" class="amount">$ 60</p>
           <p class="limit">Limit offer</p>
         </div>
         <div class="content">
@@ -188,10 +200,35 @@
 
           <p><img src="./assets/img/icons/Checkbox.svg" /> Full support</p>
         </div>
-
         <button class="buttonNormal buttonGreen">Begin</button>
       </div>
     </div>
+
+    <div id="slider">
+      <div class="photos" id="photos">
+      <div class="img-photo" id="one"><img src= "./assets/img/slider/1.jpg"></div>
+      <div class="img-photo" id="two"><img src= "./assets/img/slider/6.jpg"></div>
+      <div class="img-photo" id="three"><img src= "./assets/img/slider/4.jpg "></div>
+      <div class="img-photo" id="four"><img src= "./assets/img/slider/2.jpg "></div>
+      </div>
+     
+        <div  class="arrows">
+          <button class = "btnArrow" id="before">
+            <img src ="assets/arrowLeft.svg" class="arrowLeft" >
+          </button>
+          <button class="btnArrow" id="next">
+            <img src ="assets/arrowRight.svg" class="arrowRight" >
+          </button>
+        </div>
+        <div class = "dots">
+          <button class="dot" value="0"></button>
+          <button class="dot" value="1"></button>
+          <button class="dot" value="2"></button>
+          <button class="dot" value="3"></button>
+          
+        </div>
+    </div>
+    
 
     <div class="information">
       <div class="infoPersonal">
@@ -206,7 +243,7 @@
         </div>
       </div>
 
-      <form id="form" method="post">
+      <form id="form">
         <ul>
           <li class="input">
             <label class= "tag" for="name">NAME</label>
@@ -237,6 +274,24 @@
       <button id = "returnBtn" class= "return__button" >Return Top </button>
     </div>
 
+
+    <section  id= "popup" class="modal">
+      <div class="modal__popup">
+          <i class="fa-regular fa-circle-xmark" id="closed"></i>
+          <div class= "modal__popup--content">
+           <h2 class="subscribe">Subscribe to our newsletter</h2>
+           <p class="infoSubscribe">The most popular sales platform in country</p>
+          </div>
+
+        <form id="FormModal" class="modal__popup--form">
+            <input class= "input" type="email" id="mailPopup" name= "mail" placeholder="Writte your email"/>
+        <button id= "sendSubscribe" type="submit">Send Subscription</button>
+     
+      </form>
+    </div>
+    </section>
+
+
     <footer>
       <div class="footerText">
         <h1>OXYGENShop</h1>
@@ -249,5 +304,7 @@
       </div>
     </footer>
  
+
+
   </body>
 </html>
