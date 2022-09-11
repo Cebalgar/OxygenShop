@@ -5,13 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./main.js" type="text/javascript" defer></script>
-    <script src="https://kit.fontawesome.com/e218080865.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/e218080865.js"
+      crossorigin="anonymous"
+    ></script>
+    <link <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@200;400;700;900&display=swap" rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@200;400;700;900&display=swap"
+      rel="stylesheet"
     />
+  
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
@@ -19,34 +25,38 @@
     <title>OxygenShop</title>
   </head>
   <body>
-    
     <div class="bar">
       <div class="bar-container">
         <div class="bar-progress" id="bar"></div>
-      </div>  
+      </div>
     </div>
-  
-        
-      <nav class="nav">
-        <div class="nav__h1">
+
+    <nav class="nav">
+      <div class="nav__h1">
         <h1>OXYGENShop</h1>
-        </div>
-      <button id="btnClosedMenu" class="closedMenu" >
+      </div>
+      <button id="btnClosedMenu" class="closedMenu">
         <i class="fa-solid fa-xmark" id="closedX"></i>
       </button>
 
-        <button id= "btn" class="nav__button"><img src= "./assets/img/icons/menu.svg" /></button>
-      
-        <div id ="links" class="nav__menu">
-          <a href="">WHY US</a>
-          <a href="">BENEFITS</a>
-          <a href="">PRICE</a>
-          <a href="">CONTACT</a>
-        </div>
-    
+      <button id="btn" class="nav__button">
+        <img src="./assets/img/icons/menu.svg" />
+      </button>
+
+      <div id="links" class="nav__menu">
+        <a href="#why-us">WHY US</a>
+        <a href="#benefits">BENEFITS</a>
+        <a href="#prices">PRICE</a>
+        <a href="#contact">CONTACT</a>
+      </div>
     </nav>
-    
-    <div class="container">
+
+    <div id="containerTop">
+      <div class="return">
+      <button id="returnBtn" class="return__button">Return Top</button>
+    </div>
+
+    <div id="why-us" class="container">
       <p class="container__title">Sell More!</p>
       <p class="container__body">
         Open shop on our platform and increase your sales
@@ -88,7 +98,7 @@
       </div>
     </div>
 
-    <div class="firstContainer">
+    <div id="benefits" class="firstContainer">
       <div class="firstContainer__image">
         <div class="firstContainer__image--color"></div>
         <img class="imageSecond" src="./assets/img/macbook.png" />
@@ -130,14 +140,12 @@
       </div>
     </div>
 
-
-    <div class="price">
+  <div id="pricing">
+    <div id="prices" class="price">
       <h3>Pricing</h3>
     </div>
-
-
-    <div class="finishContainer">
-        <form id="currencies" class="selecCurrency">
+    <div id="currency">
+      <form id="currencies" class="selecCurrency">
           <label for="currencies" class="labelCurrency">Currency</label>
           <select name="currencies" id="options">
             <option value="usd">USD</option>
@@ -145,10 +153,14 @@
             <option value="eur">EUR</option>
           </select>
         </form>
+    </div>  
+  </div>
+
+      <div class="finishContainer">
       <div class="containerNormal">
         <div class="leftCon">
           <p class="title">Basic</p>
-          <p  id = "amountBasic" class="amount">$ 0</p>
+          <p id="amountBasic" class="amount">$ 0</p>
         </div>
         <div class="content">
           <p><img src="./assets/img/icons/Checkbox.svg" /> 100 MB HDD</p>
@@ -167,7 +179,7 @@
       <div class="containerNormal containerBlue">
         <div class="leftCon">
           <p class="title">Profesional</p>
-          <p id = "amountProfesional" class="amount">$ 25</p>
+          <p id="amountProfesional" class="amount">$ 25</p>
         </div>
         <div class="content">
           <p><img src="./assets/img/icons/Checkbox.svg" /> 500 MB HDD</p>
@@ -186,7 +198,7 @@
       <div class="containerNormal containerGreen">
         <div class="leftCon">
           <p class="title">Premiun</p>
-          <p id = "amountPremiun" class="amount">$ 60</p>
+          <p id="amountPremiun" class="amount">$ 60</p>
           <p class="limit">Limit offer</p>
         </div>
         <div class="content">
@@ -206,92 +218,99 @@
 
     <div id="slider">
       <div class="photos" id="photos">
-      <div class="img-photo" id="one"><img src= "./assets/img/slider/1.jpg"></div>
-      <div class="img-photo" id="two"><img src= "./assets/img/slider/6.jpg"></div>
-      <div class="img-photo" id="three"><img src= "./assets/img/slider/4.jpg "></div>
-      <div class="img-photo" id="four"><img src= "./assets/img/slider/2.jpg "></div>
+        <div class="img-photo" id="one">
+          <img src="./assets/img/slider/3.jpg" />
+        </div>
+        <div class="img-photo" id="two">
+          <img src="./assets/img/slider/6.jpg" />
+        </div>
+        <div class="img-photo" id="three">
+          <img src="./assets/img/slider/4.jpg " />
+        </div>
+        <div class="img-photo" id="four">
+          <img src="./assets/img/slider/2.jpg " />
+        </div>
       </div>
-     
-        <div  class="arrows">
-          <button class = "btnArrow" id="before">
-            <img src ="assets/arrowLeft.svg" class="arrowLeft" >
-          </button>
-          <button class="btnArrow" id="next">
-            <img src ="assets/arrowRight.svg" class="arrowRight" >
-          </button>
-        </div>
-        <div class = "dots">
-          <button class="dot" value="0"></button>
-          <button class="dot" value="1"></button>
-          <button class="dot" value="2"></button>
-          <button class="dot" value="3"></button>
-          
-        </div>
-    </div>
-    
 
-    <div class="information">
+      <div class="arrows">
+        <button class="btnArrow" id="before">
+          <img src="assets/arrowLeft.svg" class="arrowLeft" />
+        </button>
+        <button class="btnArrow" id="next">
+          <img src="assets/arrowRight.svg" class="arrowRight" />
+        </button>
+      </div>
+      <div class="dots">
+        <button class="dot" value="0"></button>
+        <button class="dot" value="1"></button>
+        <button class="dot" value="2"></button>
+        <button class="dot" value="3"></button>
+      </div>
+    </div>
+
+    <div id="contact" class="information">
       <div class="infoPersonal">
         <div class="contact">
           <h1 class="other">Any questions?</h1>
           <p class="other">Leave your email address or call us!</p>
         </div>
         <div class="infor">
-          <p><img src="./assets/img/icons/mail.svg" /> info@bestshop.xyz</p>
+          <p><img src="./assets/img/icons/mail.svg" /> cebalgar@gmail.com</p>
 
-          <p><img src="./assets/img/icons/phone.svg" /> 123 456 789</p>
+          <p><img src="./assets/img/icons/phone.svg" /> 678 614 049</p>
         </div>
       </div>
 
       <form id="form">
         <ul>
           <li class="input">
-            <label class= "tag" for="name">NAME</label>
-            <input class= "regist" type="text" id="name" name= "name" />
+            <label class="tag" for="name">NAME</label>
+            <input class="regist" type="text" id="name" name="name" />
           </li>
           <li class="input">
-            <label class= "tag" for="mail">EMAIL</label>
-            <input class= "regist" type="text" id="mail" name= "mail" />
+            <label class="tag" for="mail">EMAIL</label>
+            <input class="regist" type="text" id="mail" name="mail" />
           </li>
-          <li class= "dataProtection">
-            
-              <input type="checkbox" id="cbox1" name="cbox1" value="data"> 
-              <label class="ipsum" for="cbox1" >Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis dolor.</label>
-    
+          <li class="dataProtection">
+            <input type="checkbox" id="cbox1" name="cbox1" value="data" />
+            <label class="ipsum" for="cbox1"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis dolor.</label
+            >
           </li>
           <li class="buttonSend">
-            <button id= "send" type="submit">Send</button>
+            <button id="send" type="submit">Send</button>
           </li>
         </ul>
       </form>
-     
     </div>
-    <div class = "return">
-      <button id = "returnBtn" class= "return__button" >Return Top </button>
-    </div>
-
-
-    <section  id= "popup" class="modal">
+  
+    <section id="popup" class="modal">
       <div class="modal__popup">
-          <i class="fa-regular fa-circle-xmark" id="closed"></i>
-          <div class= "modal__popup--content">
-           <h2 class="subscribe">Subscribe to our newsletter</h2>
-           <p class="infoSubscribe">The most popular sales platform in country</p>
-          </div>
+        <i class="fa-regular fa-circle-xmark" id="closed"></i>
+        <div class="modal__popup--content">
+          <h2 class="subscribe">Subscribe to our newsletter</h2>
+          <p class="infoSubscribe">
+            The most popular sales platform in country
+          </p>
+        </div>
 
         <form id="FormModal" class="modal__popup--form">
-            <input class= "input" type="email" id="mailPopup" name= "mail" placeholder="Writte your email"/>
-        <button id= "sendSubscribe" type="submit">Send Subscription</button>
-     
-      </form>
-    </div>
+          <input
+            class="input"
+            type="email"
+            id="mailPopup"
+            name="mail"
+            placeholder="Writte your email"
+          
+          />
+          <button id="sendSubscribe" type="submit">Send Subscription</button>
+        </form>
+      </div>
     </section>
-
-
+  </div>
     <footer>
       <div class="footerText">
         <h1>OXYGENShop</h1>
@@ -299,12 +318,14 @@
       </div>
 
       <div class="logos">
+        <a target="_blank" href="https://www.linkedin.com/in/celia-b-6b85ba182/">
         <img src="./assets/img/icons/twitter.svg" />
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/celia-b-6b85ba182/">
         <img src="./assets/img/icons/facebook.svg" />
+        </a>
+   
       </div>
     </footer>
- 
-
-
   </body>
 </html>

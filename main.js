@@ -64,14 +64,14 @@ form.addEventListener("submit", e =>{
     if(nameInput.value.length < 2 || nameInput.value.length >100){
 
       nameInput.style.borderBottom= "red solid 2px";
-      alert("nombre NO VALIDO");
+      swal("nombre NO VALIDO", "El nombre debe contener más de 2 carácteres", "error");
     
     }else{
       nameInput.style.borderBottom= "green solid 2px";
     }
     if(!regexEmail.test(mail.value)){
         mailInput.style.borderBottom= "red solid 2px";
-        alert ("el email no es valido")
+        swal("El email no es valido","Introduzca un mail valido","error" );
       
     }else{
       mailInput.style.borderBottom= "green solid 2px";
@@ -79,7 +79,7 @@ form.addEventListener("submit", e =>{
     
   
     if(!checkboxInput.checked){
-        alert ("checkbox NO esta selecionado")
+        swal("Aceptar Aviso Legal"," ","error")
     }
     
 });
@@ -119,10 +119,13 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 
 const modal= document.getElementById("popup");
 const modalClosed = document.getElementById("closed");
+const formModal = document.getElementById("FormModal");
 
 const showModal = ()=>{
   localStorage.setItem("show",true);
 }
+
+
 if(typeof(Storage) !== "undefined"){
   if(!localStorage.getItem("show")){
     setTimeout(()=>{
@@ -131,6 +134,19 @@ if(typeof(Storage) !== "undefined"){
     
   }
 }
+
+formModal.addEventListener("submit", function(e){
+  e.preventDefault();
+
+
+    let regexMail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,4})+$/;
+    
+    if(!regexMail.test(mailPopup.value)){
+    
+      swal("El email no es valido","Introduzca un mail valido","error" );
+    }
+  
+  })
 
 modalClosed.addEventListener("click",(e)=>{
   modal.style.display = "none";
@@ -152,9 +168,12 @@ window.addEventListener("keyup", (e)=>{
 
 const formPopup = document.getElementById("FormModal");
 
+
+
 formPopup.addEventListener("submit", function(e){
   e.preventDefault();
-  
+
+
   const mailPopup = document.getElementById("mailPopup").value;
 
   const datos = 
@@ -177,7 +196,9 @@ headers: {
 .catch((error)=>{
   console.log ("Error en la petición: " + error);
 }) 
+
 });
+
 const susbClosed = document.getElementById("sendSubscribe");
 
 susbClosed.addEventListener("click",(e)=>{
@@ -264,7 +285,7 @@ function showSlider(n){
   let i;
   if(n > imgPhotos.length){
     indice = 1;
-    console.log(indice);
+    //console.log(indice);
   }
    if(n < 1){
     indice = imgPhotos.length;
