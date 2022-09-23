@@ -7,3 +7,4 @@ Proyecto realizado con HTML, SASS y javascript para darle la funcionalidad.
 La finalidad de este proyecto es el aprendizaje de estas tres tecnologías:💻
 
 
+soy francisco fuertes
