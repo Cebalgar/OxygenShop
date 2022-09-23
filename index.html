@@ -1,59 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="./main.js" type="text/javascript" defer></script>
-    <script
-      src="https://kit.fontawesome.com/e218080865.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@200;400;700;900&display=swap"
-      rel="stylesheet"
-    />
-  
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <title>Oxygen Shop</title>
-  </head>
-  <!--Cambios en un link y oxygen shop-->
-  <body>
-    <div class="bar">
-      <div class="bar-container">
-        <div class="bar-progress" id="bar"></div>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="./main.js" type="text/javascript" defer></script>
+  <script src="https://kit.fontawesome.com/e218080865.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@200;400;700;900&display=swap"
+    rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <title>Oxygen Shop</title>
+</head>
+
+<body>
+  <!--MI COMENTARIO DE PRUEBA FRANCISCO FUERTES-->
+  <div class="bar">
+    <div class="bar-container">
+      <div class="bar-progress" id="bar"></div>
     </div>
+  </div>
 
-    <nav class="nav">
-      <div class="nav__h1">
-        <h1>OXYGEN Shop</h1>
-      </div>
-      <button id="btnClosedMenu" class="closedMenu">
-        <i class="fa-solid fa-xmark" id="closedX"></i>
-      </button>
+  <nav class="nav">
+    <div class="nav__h1">
+      <h1>OXYGEN Shop</h1>
+    </div>
+    <button id="btnClosedMenu" class="closedMenu">
+      <i class="fa-solid fa-xmark" id="closedX"></i>
+    </button>
 
-      <button id="btn" class="nav__button">
-        <img src="./assets/img/icons/menu.svg" />
-      </button>
+    <button id="btn" class="nav__button">
+      <img src="./assets/img/icons/menu.svg" />
+    </button>
 
-      <div id="links" class="nav__menu">
-        <a href="#why-us">WHY US</a>
-        <a href="#benefits">BENEFITS</a>
-        <a href="#prices">PRICE</a>
-        <a href="#contact">CONTACT</a>
-      </div>
-    </nav>
+    <div id="links" class="nav__menu">
+      <a href="#why-us">WHY US</a>
+      <a href="#benefits">BENEFITS</a>
+      <a href="#prices">PRICE</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+  </nav>
 
-    <div id="containerTop">
-      <div class="return">
+  <div id="containerTop">
+    <div class="return">
       <button id="returnBtn" class="return__button">Return Top</button>
     </div>
 
@@ -141,12 +136,12 @@
       </div>
     </div>
 
-  <div id="pricing">
-    <div id="prices" class="price">
-      <h3>Pricing</h3>
-    </div>
-    <div id="currency">
-      <form id="currencies" class="selecCurrency">
+    <div id="pricing">
+      <div id="prices" class="price">
+        <h3>Pricing</h3>
+      </div>
+      <div id="currency">
+        <form id="currencies" class="selecCurrency">
           <label for="currencies" class="labelCurrency">Currency</label>
           <select name="currencies" id="options">
             <option value="usd">USD</option>
@@ -154,10 +149,10 @@
             <option value="eur">EUR</option>
           </select>
         </form>
-    </div>  
-  </div>
+      </div>
+    </div>
 
-      <div class="finishContainer">
+    <div class="finishContainer">
       <div class="containerNormal">
         <div class="leftCon">
           <p class="title">Basic</p>
@@ -274,12 +269,10 @@
           </li>
           <li class="dataProtection">
             <input type="checkbox" id="cbox1" name="cbox1" value="data" />
-            <label class="ipsum" for="cbox1"
-              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            <label class="ipsum" for="cbox1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis dolor.</label
-            >
+              nisi ut aliquip ex ea commodo consequat. Duis dolor.</label>
           </li>
           <li class="buttonSend">
             <button id="send" type="submit">Send</button>
@@ -287,7 +280,7 @@
         </ul>
       </form>
     </div>
-  
+
     <section id="popup" class="modal">
       <div class="modal__popup">
         <i class="fa-regular fa-circle-xmark" id="closed"></i>
@@ -299,34 +292,28 @@
         </div>
 
         <form id="FormModal" class="modal__popup--form">
-          <input
-            class="input"
-            type="email"
-            id="mailPopup"
-            name="mail"
-            placeholder="Writte your email"
-          
-          />
+          <input class="input" type="email" id="mailPopup" name="mail" placeholder="Writte your email" />
           <button id="sendSubscribe" type="submit">Send Subscription</button>
         </form>
       </div>
     </section>
   </div>
-    <footer>
-      <div class="footerText">
-        <h1>OXYGENShop</h1>
-        <p>2002 OXYGEN, All Rights Reserved</p>
-      </div>
+  <footer>
+    <div class="footerText">
+      <h1>OXYGENShop</h1>
+      <p>2002 OXYGEN, All Rights Reserved</p>
+    </div>
 
-      <div class="logos">
-        <a target="_blank" href="https://www.linkedin.com/in/celia-b-6b85ba182/">
+    <div class="logos">
+      <a target="_blank" href="https://www.linkedin.com/in/celia-b-6b85ba182/">
         <img src="./assets/img/icons/twitter.svg" />
-        </a>
-        <a target="_blank" href="https://www.linkedin.com/in/celia-b-6b85ba182/">
+      </a>
+      <a target="_blank" href="https://www.linkedin.com/in/celia-b-6b85ba182/">
         <img src="./assets/img/icons/facebook.svg" />
-        </a>
-   
-      </div>
-    </footer>
-  </body>
+      </a>
+
+    </div>
+  </footer>
+</body>
+
 </html>
